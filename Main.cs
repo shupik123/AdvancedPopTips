@@ -50,6 +50,7 @@ namespace AdvancedPopTips
                     // download and unzip
                 }
 
+
                 string[] fileEntries = Directory.GetFiles("Mods/AdvancedPopTips/"); // getting files from directory
                 foreach (var file in fileEntries)
                 {
