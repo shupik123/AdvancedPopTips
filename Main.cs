@@ -3,7 +3,6 @@ using System.Reflection;
 using System.Net;
 using Assets.Scripts.Unity.Localization;
 using Harmony;
-using NKHook6;
 using MelonLoader;
 using UnityEngine;
 using System.IO;
@@ -16,19 +15,14 @@ namespace AdvancedPopTips
         public override void OnApplicationStart()
         {
             base.OnApplicationStart();
-            NKHook6.Logger.Log("AdvancedPopTips has loaded!"); // announcing mod launched
+            System.Console.WriteLine("AdvancedPopTips has loaded!"); // announcing mod launched
         }
 
-        //private static System.Collections.Generic.Dictionary<string, string> LocaleOverrides =
-        //    new System.Collections.Generic.Dictionary<string, string>()
-        //    {
-        //        {"SniperMonkey Description", "no shot"},
-        //        {"SuperMonkey Description", "i dart monke but zoooooom"}
-        //    };
 
         [HarmonyPatch]
         class LocalizationManagerPatch
         {
+
 
             static MethodBase TargetMethod()
             {
@@ -49,7 +43,7 @@ namespace AdvancedPopTips
 
                 if (!Directory.Exists("Mods/AdvancedPopTips/")) // downloading the overrides
                 {
-                    NKHook6.Logger.Log("Description overrides not detected. This is normal for a first time launch but requires internet. Downloading...");
+                    System.Console.WriteLine("Description overrides not detected. This is normal for a first time launch but requires internet. Downloading...");
 
                     // download
                     WebClient webClient = new WebClient();
@@ -79,8 +73,18 @@ namespace AdvancedPopTips
                 }
 
 
+                //    // a test override - to be commented out for normal mod builds
+                //private static System.Collections.Generic.Dictionary<string, string> LocaleOverrides =
+                //    new System.Collections.Generic.Dictionary<string, string>()
+                //    {
+                //        {"SniperMonkey Description", "i snipe"},
+                //        {"SuperMonkey Description", "dart monkey but speed"}
+                //    };
+
+
+
                 //    // writes all the text table data - to be commented out for normal mod builds
-                
+                //
                 //    foreach (var entry in LocalizationManager.instance.textTable) // for listing all the text table values
                 //    {
                 //        using (System.IO.StreamWriter file =
@@ -92,7 +96,8 @@ namespace AdvancedPopTips
                 //            //file.WriteLine(entry.key + "|");
                 //        }
                 //    }
-                
+
+
             }
 
             static void Postfix()

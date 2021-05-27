@@ -15,7 +15,7 @@ using AdvancedPopTips;
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: MelonInfo(typeof(AdvancedPopTips.Main), "AdvancedPopTips", "0.1.0", "shupik")]
+[assembly: MelonInfo(typeof(AdvancedPopTips.Main), "AdvancedPopTips", "0.1.1", "shupik")]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from

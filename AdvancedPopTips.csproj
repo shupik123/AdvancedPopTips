@@ -43,6 +43,9 @@
       <HintPath>..\..\..\..\..\program files (x86)\steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Il2CppSystem.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="MelonLoader">
+      <HintPath>..\..\..\..\..\program files (x86)\steam\steamapps\common\BloonsTD6\MelonLoader\MelonLoader.dll</HintPath>
+    </Reference>
     <Reference Include="MelonLoader.ModHandler">
       <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\MelonLoader.ModHandler.dll</HintPath>
       <Private>False</Private>
