@@ -62,7 +62,7 @@ namespace AdvancedPopTips
                     {
                         string rawText = File.ReadAllText(file);
                         string[] overrides = rawText.Split('\n'); // split file into lines
-
+                        
                         foreach (var edit in overrides) // for every line
                         {
                             string[] parts = edit.Split('|'); // parsing the mod's file
