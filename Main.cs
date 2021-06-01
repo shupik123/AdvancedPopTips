@@ -43,15 +43,15 @@ namespace AdvancedPopTips
 
                 if (!Directory.Exists("Mods/AdvancedPopTips/")) // downloading the overrides
                 {
-                    System.Console.WriteLine("Description overrides not detected. This is normal for a first time launch but requires internet. Downloading...");
+                    System.Console.WriteLine("[AdvancedPopTips] Description overrides not detected. This is normal for a first time launch but requires internet. Downloading...");
 
                     // download
                     WebClient webClient = new WebClient();
-                    webClient.DownloadFile("https://github.com/shupik123/Advanced-Pop-Tips/raw/master/AdvancedPopTips.zip", @"Mods/AdvancedPopTips.zip");
+                    webClient.DownloadFile("https://github.com/shupik123/Advanced-Pop-Tips/raw/master/overrides.zip", @"Mods/overrides.zip");
 
-                    ZipFile.ExtractToDirectory(@"Mods/AdvancedPopTips.zip", @"Mods/"); // extract
+                    ZipFile.ExtractToDirectory(@"Mods/overrides.zip", @"Mods/"); // extract
 
-                    File.Delete(@"Mods/AdvancedPopTips.zip"); // delete zip
+                    File.Delete(@"Mods/overrides.zip"); // delete zip
                 }
 
 
