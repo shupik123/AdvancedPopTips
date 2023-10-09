@@ -1,4 +1,4 @@
 # Advanced-Pop-Tips
-A `.dll` mod for Bloons TD 6 which can be downloaded here.
+A `.dll` mod for Bloons TD 6.
 
-## Index:
+- **THIS PROJECT IS NO LONGER MAINTAINED**
